@@ -1,0 +1,42 @@
+.ut {
+    color: #BA1C21;
+    font-weight:bold;
+}
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+}
+body {
+background-color: #ffffff;
+color: #666666;
+font-family: verdana, Arial, sans-serif;
+}
+h1 {
+    color:#FFFFFF;
+    background-color:#003058;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+}
+header h1 {
+    line-height: 140%;
+    padding: 0.5rem;
+}
+nav {
+    background-color: #F3F3F3;
+    font-weight: bold;
+}
+h2 {
+    color:#424242;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+footer {
+    font-size: 0.7rem;
+    font-style: italic;
+    text-align:center;
+}
+dt {
+    color:#003058;
+    font-weight:bold;
+}
