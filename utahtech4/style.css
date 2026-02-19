@@ -1,3 +1,6 @@
+*{
+    box-sizing:border-box;
+}
 .ut {
     color: #BA1C21;
     font-weight:bold;
