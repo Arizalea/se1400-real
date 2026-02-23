@@ -92,6 +92,7 @@ h3{
 main {
     padding-left:2rem;
     padding-right:2rem;
+    background-color: #ffffff;
 }
 nav a { text-decoration: none;
         color:white;
@@ -100,9 +101,6 @@ nav a { text-decoration: none;
         text-align:center;}
 nav a:hover{
     background-color:#BA1C21;
-}
-img {
-    width:100%;
 }
 nav ul{
     margin:0;
