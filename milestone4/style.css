@@ -20,6 +20,20 @@
   background: rgba(255,150,0,0.3);
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  min-height: 140px;
+}
+
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
 .nav {
   grid-column: 1 / 9;
   min-height: 80px;
