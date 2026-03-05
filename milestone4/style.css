@@ -30,7 +30,7 @@
 
 
 .logo {
-  width: 120px;
+  width: clamp(100px, 15vw, 260px);
   height: auto;
 }
 
@@ -71,15 +71,17 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;
+  justify-content: space-evenly;   /* spreads them evenly */
+  align-items: center;
   padding: 0;
   margin: 0;
+  width: 100%;                     /* important */
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: clamp(18px, 2.5vw, 28px);
   font-weight: 500;
 }
 
@@ -111,19 +113,21 @@
   align-items: flex-end;   /* pushes text to right */
   text-align: right;       /* aligns text itself */
   color: white;
-  padding-right: 60px;     /* space from right edge */
+  padding-right: 5vw;     /* space from right edge */
   z-index: 2;
 }
 
 /* Typography */
 .hero-text h1 {
-  font-size: 48px;
+  font-size: clamp(24px, 4vw, 48px);
   margin: 0;
   font-style: italic;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-text h2 {
-  font-size: 90px;
+  font-size: clamp(40px, 8vw, 90px);
   margin: 0;
   font-style: italic;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
 }
