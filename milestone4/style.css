@@ -167,13 +167,6 @@ body {
   font-size: 28px;
 }
 
-.book-title {
-  font-family: serif;
-  font-size: 42px;
-  color: #8e7cc3;
-  margin-bottom: 20px;
-}
-
 .book-description {
   max-width: 420px;
   margin: auto;
@@ -194,12 +187,11 @@ body {
 
 .quote {
   margin-top: 60px;
-  font-size: 32px;
-  max-width: 500px;
+  font-size: clamp(24px, 3vw, 36px);
+  color: #4b3a77;
   margin-left: auto;
   margin-right: auto;
 }
-
 .newsletter-box {
   background: #cfc6e6;
   padding: 70px 60px;
@@ -236,10 +228,16 @@ body {
   box-shadow: none;
   transform: translateY(3px);
 }
-.hero-text h1,
-.hero-text h2,
-.book-title,
-.series-title,
 .newsletter-box h2 {
   font-family: 'Cinzel Decorative', serif;
+}
+.book-title {
+  font-family: 'Tangerine', cursive;
+  font-size: clamp(60px, 5vw, 85px);
+  color: #8e7cc3;
+  margin-bottom: 15px;
+}
+.hero-text h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(26px, 4vw, 48px);
 }
