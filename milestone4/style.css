@@ -155,8 +155,8 @@ body{
 }
 
 .book-image {
-  width: 160px;
-  margin-bottom: 20px;
+  width: clamp(180px, 18vw, 260px);
+  margin-bottom: 25px;
 }
 
 .series-title {
@@ -198,17 +198,24 @@ body{
   text-align: center;
 }
 
-.newsletter-box h2 {
-  color: #4b3a77;
-  font-size: 36px;
-  margin-bottom: 20px;
+.newsletter-box {
+  background: #ebe1ff;
+  padding: clamp(40px, 5vw, 80px);
+  border-radius: 40px;
+  text-align: center;
+  max-width: 520px;
+  margin: auto;
 }
 
 .newsletter-box p {
   font-size: 20px;
   margin-bottom: 30px;
 }
-
+.newsletter-box h2 {
+  color: #4b3a77;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
 .signup-btn {
   background: white;
   border: none;
