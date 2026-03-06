@@ -187,8 +187,8 @@ body{
 }
 
 .quote {
-  margin-top: 50px;
-  font-size: 24px;
+  margin-top: 70px;
+  font-size: clamp(26px, 2vw, 34px);
   color: #4b3a77;
 }
 .newsletter-box {
