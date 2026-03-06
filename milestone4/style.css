@@ -61,14 +61,6 @@ body{
   background: white;
 }
 
-
-.content {
-  grid-column: 2 / 8;
-  min-height: 500px;
-  background: white;
-}
-
-
 .footer {
   grid-column: 1 / 9;
   min-height: 80px;
@@ -146,13 +138,10 @@ body{
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
 }
 .content {
-  background: #f5f5f5;
+  grid-column: 2 / 8;
+  min-height: 700px;   /* closer to your mockup height */
+  background: white;
   padding: 60px 0;
-}
-main {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  gap: 20px;
 }
 /* two-column layout */
 .content-wrapper {
