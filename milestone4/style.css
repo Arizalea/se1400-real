@@ -63,8 +63,8 @@ body {
 
 .footer {
   grid-column: 1 / 9;
-  min-height: 80px;
-  background: rgba(255,120,120,0.3);
+  min-height: 40px;
+  background: transparent;
 }
 
 .nav {
