@@ -133,10 +133,8 @@ body {
 }
 
 .hero-text h2 {
-  font-size: clamp(40px, 8vw, 90px);
-  margin: 0;
-  font-style: italic;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Tangerine', cursive;
+  font-size: clamp(70px, 9vw, 120px);
 }
 .content {
   grid-column: 1 / 9;
@@ -238,6 +236,6 @@ body {
   margin-bottom: 15px;
 }
 .hero-text h1 {
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Tangerine', cursive;
   font-size: clamp(26px, 4vw, 48px);
 }
