@@ -25,9 +25,10 @@ body{
   background: white;
   min-height: 60px;
 }
-.header img{
-  height: 120px;
-  width: auto;
+.header img {
+  
+  width: clamp(60px, 18vw, 200px);
+  height: auto;
 }
 
 .logo {
