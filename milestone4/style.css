@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
+  font-family: 'Comfortaa', sans-serif;
   background-color: white;
 }
 .grid-container {
@@ -87,8 +88,8 @@ body{
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-size: clamp(18px, 2.5vw, 28px);
-  font-weight: 500;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 600;
 }
 
 .nav-links a:hover {
@@ -234,4 +235,11 @@ body{
 .signup-btn:hover {
   box-shadow: none;
   transform: translateY(3px);
+}
+.hero-text h1,
+.hero-text h2,
+.book-title,
+.series-title,
+.newsletter-box h2 {
+  font-family: 'Cinzel Decorative', serif;
 }
