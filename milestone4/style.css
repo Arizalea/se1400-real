@@ -1,16 +1,20 @@
-
+body{
+  background-color: white;
+}
 .grid-container {
-    display: grid;
-    grid-template-columns:
+  display: grid;
+  grid-template-columns:
     minmax(0px, 1fr)
     repeat(6, minmax(0, 175px))
     minmax(0px, 1fr);
 
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 0px;
+
   padding: 10px;
 }
 .grid-item {
-  background-color: rgba(255,255,255,0.3);
+  background-color: white;
   padding: 20px;
 }
 .header {
@@ -43,14 +47,14 @@
 .hero {
   grid-column: 1 / 9;
   min-height: 200px;
-  background: rgba(120,100,200,0.3);
+  background: white;
 }
 
 
 .content {
   grid-column: 2 / 8;
   min-height: 500px;
-  background: rgba(160,120,170,0.3);
+  background: white;
 }
 
 
