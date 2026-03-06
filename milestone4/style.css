@@ -220,8 +220,8 @@ body{
 .signup-btn {
   background: white;
   border: none;
-  padding: 16px 46px;
-  font-size: 20px;
+  padding: 20px 55px;
+  font-size: 35px;
   border-radius: 10px;
   cursor: pointer;
 }
