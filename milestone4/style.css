@@ -51,7 +51,7 @@ body {
 .nav {
   grid-column: 1 / 9;
   min-height: 80px;
-  background: rgba(0,100,200,0.3);
+  background: white;
 }
 
 
@@ -157,6 +157,7 @@ body {
   margin: auto;
   font-size: 18px;
   line-height: 1.6;
+  color:#4b3a77;
 }
 
 .discover-btn {
@@ -194,6 +195,7 @@ body {
 .newsletter-box p {
   font-size: 35px;
   margin-bottom: 30px;
+  color:#2b1957
 }
 .signup-btn {
   background: white;
