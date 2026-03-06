@@ -18,19 +18,17 @@ body{
   padding: 20px;
 }
 .header {
-  grid-column: 1 / 9;   /* full width */
-  min-height: 120px;
-  background: rgba(255,150,0,0.3);
-}
-
-.header {
+  grid-column: 1 / 9;
   display: flex;
   justify-content: center;
   align-items: center;
   background: white;
-  min-height: 140px;
+  min-height: 60px;
 }
-
+.header img{
+  height: 120px;
+  width: auto;
+}
 
 .logo {
   width: clamp(100px, 15vw, 260px);
