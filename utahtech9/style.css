@@ -248,6 +248,10 @@ video{
     width:100%;
     height:auto;
 }
+#shoppingcart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 }
 @media only screen and (max-width: 600px) {
     header h1 {
@@ -263,4 +267,8 @@ video{
     #homehero, #studenthero, #facultyhero, #alumnihero, #shophero {
         display: none;
     }
+    #shoppingcart {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 }
