@@ -446,7 +446,11 @@ h2{
 /* =========================
    MOBILE
 ========================= */
-
+.images {
+  width: 100px;
+  height:auto;
+  justify-content: center;
+}
 @media (max-width: 768px) {
 
   .about-top {
