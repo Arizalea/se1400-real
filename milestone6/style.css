@@ -230,6 +230,78 @@ body {
   font-weight: 700;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
+/* SECTION WRAPPER */
+.books-section {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 60px 0;
+}
+
+/* EACH ROW */
+.book-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PURPLE BAR */
+.book-bar {
+  width: 100%;
+  background: #6f5aa7;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 1;
+}
+
+.book-bar h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(20px, 3vw, 36px);
+}
+
+/* BUTTON */
+.learn-btn {
+  background: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #3c2576;
+  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+  transition: 0.2s;
+}
+
+.learn-btn:hover {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+
+/* BOOK IMAGES */
+.book-img {
+  position: absolute;
+  width: clamp(120px, 15vw, 200px);
+  z-index: 2;
+  filter: drop-shadow(0px 6px 4px rgba(0,0,0,0.3));
+}
+
+/* LEFT / RIGHT POSITIONING */
+.book-img.left {
+  left: 10%;
+}
+
+.book-img.right {
+  right: 10%;
+}
+
+/* REVERSE LAYOUT */
+.book-row.reverse .book-bar {
+  flex-direction: row-reverse;
+}
 @media (max-width: 992px) {
 
   .grid-container {
