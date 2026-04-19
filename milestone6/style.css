@@ -19,6 +19,12 @@ p {
  padding-right: 100px;
  padding-left: 100px;
 }
+h2{
+  font-family: 'Tangerine', cursive;
+  color:#2b1957;
+  font-size: 100px;
+  text-align:center;
+}
 .grid-container {
   display: grid;
   grid-template-columns:
@@ -358,6 +364,104 @@ p {
 .row-2 img,
 .row-4 img {
   margin: 0;
+}
+/* =========================
+   ABOUT PAGE LAYOUT
+========================= */
+
+.about-page {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.about-title {
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif;
+  color: #3c2576;
+  font-size: clamp(36px, 5vw, 60px);
+  margin-bottom: 40px;
+}
+
+/* =========================
+   TOP SECTION (IMAGE + TEXT)
+========================= */
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/* image */
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  justify-self: center;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+}
+
+/* text */
+.about-text p {
+  font-family: 'Comfortaa', sans-serif;
+  color: #2b1957;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================
+   PURPLE BOXES
+========================= */
+
+.about-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-box {
+  flex: 1;
+  min-width: 200px;
+
+  background-color: #8e7cc3;
+  color: white;
+  text-align: center;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 20px;
+
+  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .about-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-img {
+    max-width: 80%;
+  }
+
+  .about-boxes {
+    flex-direction: column;
+  }
+
 }
 @media (max-width: 768px) {
 
