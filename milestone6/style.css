@@ -257,7 +257,7 @@ body {
 
 .books-page .bar {
   width: 75vw;
-  height: 33%;
+  height: 45%;
   background-color: #8e7cc3;
 }
 
@@ -277,7 +277,7 @@ body {
 ========================= */
 
 .books-page img {
-  height: 85%;
+  height: 95%;
   width: auto;
   object-fit: contain;
   display: block;
