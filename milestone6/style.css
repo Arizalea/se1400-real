@@ -230,88 +230,64 @@ body {
   font-weight: 700;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
-/* SECTION WRAPPER */
-.books-section {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding: 60px 0;
+/* =========================
+   BOOKS PAGE LAYOUT
+========================= */
+
+.books-page {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  height: 100vh;
 }
 
-/* EACH ROW */
-.book-row {
-  position: relative;
+/* each row */
+.books-page .row {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-/* PURPLE BAR */
-.book-bar {
+  height: 25vh;
   width: 100%;
-  background: #6f5aa7;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  z-index: 1;
+  gap: 0;
 }
 
-.book-bar h2 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(20px, 3vw, 36px);
+/* =========================
+   PURPLE BAR
+   - 75% width
+   - touches screen edges
+========================= */
+
+.books-page .bar {
+  width: 75vw;
+  height: 33%;
+  background-color: #8e7cc3;
 }
 
-/* BUTTON */
-.learn-btn {
-  background: white;
-  border: none;
-  padding: 15px 35px;
-  font-size: 18px;
-  font-family: 'Comfortaa' serif;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #3c2576;
-  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
-  transition: 0.2s;
+/* push bars to correct side so they touch screen edges */
+.row-1 .bar,
+.row-3 .bar {
+  margin-right: auto; /* bar sticks to left edge */
 }
 
-.learn-btn:hover {
-  box-shadow: none;
-  transform: translateY(3px);
+.row-2 .bar,
+.row-4 .bar {
+  margin-left: auto;  /* bar sticks to right edge */
 }
 
-/* BOOK IMAGES */
-.book-img {
-  position: absolute;
-  width: clamp(120px, 15vw, 200px);
+/* =========================
+   BOOK IMAGES
+========================= */
+
+.books-page img {
+  height: 85%;
+  width: auto;
+  object-fit: contain;
+  display: block;
   z-index: 2;
-  filter: drop-shadow(0px 6px 4px rgba(0,0,0,0.3));
 }
 
-/* LEFT / RIGHT POSITIONING */
-.book-img.left {
-  left: 10%;
-}
-
-.book-img.right {
-  right: 10%;
-}
-
-/* REVERSE LAYOUT */
-.book-row.reverse .book-bar {
-  flex-direction: row-reverse;
-}
-@media (max-width: 992px) {
-
-  .grid-container {
-    grid-template-columns:
-      minmax(0px, 1fr)
-      minmax(0px, 768px)
-      minmax(0px, 1fr);
-  }
-
+/* optional safety: prevents accidental spacing issues */
+.books-page .bar,
+.books-page img {
+  flex-shrink: 0;
 }
 @media (max-width: 768px) {
 
