@@ -116,7 +116,13 @@ p {
   transform: scaleX(-1);
   z-index: 1;
 }
-
+.summary-image {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1;
+  transform: scaleX(-1);
+  z-index: 1;
+}
 .hero-text {
   grid-area: 1 / 1;
   display: flex;
