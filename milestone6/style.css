@@ -7,6 +7,18 @@ body {
   font-family: 'Comfortaa', sans-serif;
   background-color: white;
 }
+h1{
+  font-family: 'Cinzel Decorative' serif;
+  color:#3c2576;
+  text-align: center;
+}
+p {
+ font-family: 'Comfortaa' serif;
+ color:#2b1957;
+ text-align: center;
+ padding-right: 100px;
+ padding-left: 100px;
+}
 .grid-container {
   display: grid;
   grid-template-columns:
@@ -229,16 +241,17 @@ body {
   margin: 0;
   font-weight: 700;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  color: white;
 }
 /* =========================
-   BOOKS PAGE LAYOUT (FINAL FIXED VERSION)
+   BOOKS PAGE BASE
 ========================= */
 
 .books-page {
   width: 100%;
 }
 
-/* each row is a controlled flex line */
+/* each row layout */
 .books-page .row {
   display: flex;
   align-items: center;
@@ -248,18 +261,50 @@ body {
 }
 
 /* =========================
-   BAR STYLING
+   BAR BASE STYLE
 ========================= */
 
 .books-page .bar {
   width: 75vw;
   height: 45%;
-  background-color: #8e7cc3;
+  background-color: #674ea7;
   flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(16px, 2vw, 28px);
+  padding: 0 20px;
+  gap: 15px;
 }
 
 /* =========================
-   IMAGE STYLING
+   BUTTON STYLE
+========================= */
+.book-btn {
+  background: white;
+  color: #8e7cc3;
+  font-family: 'Comfortaa', sans-serif;
+  padding: 12px 22px;
+  font-size: 16px;
+  border-radius: 14px;
+  display: inline-block;
+  text-decoration: none;
+
+  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+  transition: all 0.2s ease;
+  margin-left: 15px;
+}
+
+.book-btn:hover {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+/* =========================
+   IMAGE STYLE
 ========================= */
 
 .books-page img {
@@ -268,10 +313,11 @@ body {
   object-fit: contain;
   display: block;
   flex-shrink: 0;
+  filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.25));
 }
 
 /* =========================
-   ROWS 1 & 3 (BAR → IMAGE, LEFT ALIGNED)
+   ROW 1 & 3 (BAR LEFT)
 ========================= */
 
 .row-1,
@@ -290,12 +336,12 @@ body {
 }
 
 /* =========================
-   ROWS 2 & 4 (IMAGE → BAR, RIGHT ALIGNED BAR)
+   ROW 2 & 4 (BAR RIGHT)
 ========================= */
 
 .row-2,
 .row-4 {
-  justify-content: flex-end; /* THIS fixes right alignment */
+  justify-content: flex-end;
 }
 
 .row-2 .bar,
@@ -336,4 +382,36 @@ body {
   font-size: 20px;
   padding: 12px 30px;
 }
+/* =========================
+   BOOKS PAGE MOBILE VIEW
+   (1 BAR + 1 IMAGE PER SCREEN)
+========================= */
+
+.books-page {
+  display: block;
+}
+
+/* each row becomes a full screen section */
+.books-page .row {
+  height: 100vh;          /* one full screen per book */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* bar becomes full width but smaller height */
+.books-page .bar {
+  width: 90%;
+  height: 60px;
+  font-size: clamp(16px, 4vw, 24px);
+}
+
+/* make images BIGGER */
+.books-page img {
+  height: 60vh;
+  width: auto;
+}
+
 }
