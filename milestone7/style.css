@@ -1,0 +1,587 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Comfortaa', sans-serif;
+  background-color: #ffffff;
+}
+h1{
+  font-family: 'Cinzel Decorative' serif;
+  color:#3c2576;
+  text-align: center;
+}
+p {
+ font-family: 'Comfortaa' serif;
+ color:#2b1957;
+ text-align: center;
+ padding-right: 100px;
+ padding-left: 100px;
+}
+h2{
+  font-family: 'Tangerine', cursive;
+  color:#2b1957;
+  font-size: 100px;
+  text-align:center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns:
+    minmax(0px, 1fr)
+    repeat(6, minmax(0, 175px))
+    minmax(0px, 1fr);
+
+  column-gap: 10px;
+  row-gap: 0px;
+
+  padding: 10px;
+}
+.grid-item {
+  background-color: white;
+  padding: 10px 20px;
+}
+.header {
+  grid-column: 1 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  min-height: 60px;
+}
+.header img {
+  width: clamp(50px, 14vw, 150px);
+  height: auto;
+}
+
+.logo {
+  width: clamp(100px, 15vw, 260px);
+  height: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+.logo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.nav {
+  grid-column: 1 / 9;
+  min-height: 80px;
+  background: #8e7cc3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  grid-column: 1 / 9;
+  min-height: 200px;
+  background: white;
+}
+
+.footer {
+  grid-column: 1 / 9;
+  min-height: 40px;
+  background: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;   /* spreads them evenly */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;                     /* important */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+/* HERO SECTION */
+.hero {
+  grid-column: 1 / 9;
+  display: grid;          /* grid inside grid */
+  padding: 0;
+  position: relative;
+}
+
+/* Hero image */
+.hero-image {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1;
+  transform: scaleX(-1);
+  z-index: 1;
+}
+.summary-image {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1;
+  transform: scaleX(-1);
+  z-index: 1;
+}
+.hero-text {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;   /* pushes text to right */
+  text-align: right;       /* aligns text itself */
+  color: white;
+  padding-right: 5vw;     /* space from right edge */
+  z-index: 2;
+}
+
+.content {
+  grid-column: 1 / 9;
+  min-height: 700px;   /* closer to your mockup height */
+  background: white;
+  padding: 60px 0;
+}
+/* two-column layout */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1100px;
+  margin: auto;
+}
+.left-content {
+  text-align: center;
+}
+
+.book-image {
+  width: clamp(220px, 22vw, 320px);
+  margin-bottom: 20px;
+  filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.25));
+}
+.series-title {
+  color: #4b3a77;
+  font-size: 28px;
+}
+
+.book-description {
+  max-width: 420px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color:#4b3a77;
+}
+
+.discover-btn {
+  margin-top: 25px;
+  background: #8e7cc3;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quote {
+  margin-top: 60px;
+  font-size: clamp(24px, 3vw, 36px);
+  color: #4b3a77;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter-box {
+  background: #ebe1ff;
+  padding: 70px 60px;
+  border-radius: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+}
+.newsletter-box h2 {
+  color: #4b3a77;
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.newsletter-box p {
+  font-size: 35px;
+  margin-bottom: 30px;
+  color:#2b1957
+}
+.signup-btn {
+  background: white;
+  border: none;
+  padding: 20px 55px;
+  font-size: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  color:#3c2576;
+}
+.discover-btn,
+.signup-btn {
+  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+  transition: box-shadow 0.2s ease;
+  font-family: 'Comfortaa', serif;
+}
+.discover-btn:hover,
+.signup-btn:hover {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+.newsletter-box h2 {
+  font-family: 'Cinzel Decorative', serif;
+}
+.book-title {
+  font-family: 'Tangerine', cursive;
+  font-size: clamp(60px, 5vw, 85px);
+  color: #9078df;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+}
+
+.hero-text h1 {
+  font-family: 'Tangerine', cursive;
+  font-size: clamp(70px, 9vw, 120px);
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+/* =========================
+   BOOKS PAGE BASE
+========================= */
+
+.books-page {
+  width: 100%;
+}
+
+/* each row layout */
+.books-page .row {
+  display: flex;
+  align-items: center;
+  height: 25vh;
+  width: 100%;
+  gap: 0;
+}
+
+/* =========================
+   BAR BASE STYLE
+========================= */
+
+.books-page .bar {
+  width: 75vw;
+  height: 45%;
+  background-color: #674ea7;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(16px, 2vw, 28px);
+  padding: 0 20px;
+  gap: 15px;
+}
+
+/* =========================
+   BUTTON STYLE
+========================= */
+.book-btn {
+  background: white;
+  color: #8e7cc3;
+  font-family: 'Comfortaa', sans-serif;
+  padding: 12px 22px;
+  font-size: 16px;
+  border-radius: 14px;
+  display: inline-block;
+  text-decoration: none;
+
+  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+  transition: all 0.2s ease;
+  margin-left: 15px;
+}
+
+.book-btn:hover {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+/* =========================
+   IMAGE STYLE
+========================= */
+
+.books-page img {
+  height: 95%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.25));
+}
+
+/* =========================
+   ROW 1 & 3 (BAR LEFT)
+========================= */
+
+.row-1,
+.row-3 {
+  justify-content: flex-start;
+}
+
+.row-1 .bar,
+.row-3 .bar {
+  margin-right: 0;
+}
+
+.row-1 img,
+.row-3 img {
+  margin: 0;
+}
+
+/* =========================
+   ROW 2 & 4 (BAR RIGHT)
+========================= */
+
+.row-2,
+.row-4 {
+  justify-content: flex-end;
+}
+
+.row-2 .bar,
+.row-4 .bar {
+  margin: 0;
+}
+
+.row-2 img,
+.row-4 img {
+  margin: 0;
+}
+/* =========================
+   ABOUT PAGE LAYOUT
+========================= */
+
+.about-page {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.about-title {
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif;
+  color: #3c2576;
+  font-size: clamp(36px, 5vw, 60px);
+  margin-bottom: 40px;
+}
+
+/* =========================
+   TOP SECTION (IMAGE + TEXT)
+========================= */
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/* image */
+.about-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  justify-self: center;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+}
+
+/* text */
+.about-text p {
+  font-family: 'Comfortaa', sans-serif;
+  color: #2b1957;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================
+   PURPLE BOXES
+========================= */
+
+.about-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-box {
+  flex: 1;
+  min-width: 200px;
+
+  background-color: #8e7cc3;
+  color: white;
+  text-align: center;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 20px;
+
+  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+}
+/* =========================
+   CONTACT PAGE LAYOUT
+========================= */
+
+.contact-page {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* spacing between sections */
+.contact-section {
+  margin-bottom: 50px;
+}
+
+/* headings */
+.contact-section h1 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #3c2576;
+  margin-bottom: 10px;
+}
+
+/* text */
+.contact-section p {
+  font-family: 'Comfortaa', sans-serif;
+  color: #2b1957;
+  font-size: 18px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* icons */
+.social-icons img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+
+  border-radius: 15px;
+  box-shadow: 0px 6px 3px rgba(0,0,0,0.25);
+
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MOBILE
+========================= */
+.images {
+  width: 100px;
+  height:auto;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+
+  .about-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-img {
+    max-width: 80%;
+  }
+
+  .about-boxes {
+    flex-direction: column;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .header,
+  .nav,
+  .hero,
+  .content,
+  .footer {
+    grid-column: 1 / 2;
+  }
+.content-wrapper {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+.nav-links {
+  flex-direction: column;
+  gap: 10px;
+}
+.newsletter-box p {
+  font-size: 20px;
+}
+
+.signup-btn {
+  font-size: 20px;
+  padding: 12px 30px;
+}
+/* =========================
+   BOOKS PAGE MOBILE VIEW
+   (1 BAR + 1 IMAGE PER SCREEN)
+========================= */
+
+.books-page {
+  display: block;
+}
+
+/* each row becomes a full screen section */
+.books-page .row {
+  height: 100vh;          /* one full screen per book */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* bar becomes full width but smaller height */
+.books-page .bar {
+  width: 90%;
+  height: 60px;
+  font-size: clamp(16px, 4vw, 24px);
+}
+
+/* make images BIGGER */
+.books-page img {
+  height: 60vh;
+  width: auto;
+}
+
+}
